@@ -1,0 +1,8 @@
+{
+  "name": "foodgroove gcp",
+  "description": "Savory Bites is a premier restaurant and catering service specializing in event trays, gourmet packages, and authentic culinary experiences. From our heritage-rich story to our interactive menu and secure checkout, we bring fine dining to your table.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
