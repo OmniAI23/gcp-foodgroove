@@ -12,7 +12,7 @@ const CONTENT_PATH = path.join(process.cwd(), "src", "content.json");
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
   // Initialize email transporter
   const getTransporter = () => {

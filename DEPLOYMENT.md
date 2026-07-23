@@ -38,7 +38,18 @@ Ensure the following environment variables are set in your production environmen
 
 ## Cloud Deployment (e.g., Cloud Run, Heroku)
 
+### Option 1: Docker (Cloud Run via GitHub)
+
+A `Dockerfile` has been provided to simplify deployment to Google Cloud Run. When you connect your GitHub repository to Cloud Run, it will automatically detect the `Dockerfile` and build your container.
+
+1. **GitHub Connection**: In the Google Cloud Console, create a new Cloud Run service and select "Continuously deploy from a repository".
+2. **Configuration**: Select your GitHub repository and branch.
+3. **Build Type**: Choose "Dockerfile".
+4. **Port**: Cloud Run will automatically inject a `PORT` environment variable. The application is configured to listen on this port.
+
+### Option 2: Manual Deployment
+
 1. **Build Artifacts**: Ensure `npm run build` is executed during the build phase of your CI/CD pipeline.
 2. **Execution**: Set the start command to `npm run start`.
-3. **Port**: The application binds to port `3000` by default. Ensure your cloud provider routes traffic to this port.
+3. **Port**: The application binds to the port specified in the `PORT` environment variable (defaults to `3000`).
 4. **Static Assets**: The Express server automatically serves static files from the `dist/` directory in production mode.
