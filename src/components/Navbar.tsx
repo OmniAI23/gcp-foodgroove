@@ -28,7 +28,6 @@ export default function Navbar() {
     { name: 'Menu', path: '/menu' },
     { name: 'Catering', path: '/catering' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Admin', path: '/admin' },
   ];
 
   const logo = content?.siteConfig?.logo;

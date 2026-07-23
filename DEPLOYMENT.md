@@ -12,10 +12,13 @@ This application is a full-stack React application with an Express backend, bund
 Ensure the following environment variables are set in your production environment:
 
 - `STRIPE_SECRET_KEY`: Your Stripe secret key for processing payments.
-- `STRIPE_PUBLISHABLE_KEY`: Your Stripe publishable key (prefix with `VITE_` if used on the client: `VITE_STRIPE_PUBLISHABLE_KEY`).
+- `VITE_STRIPE_PUBLISHABLE_KEY`: Your Stripe publishable key for the frontend.
 - `ADMIN_PASSWORD`: Password for the admin portal.
-- `EMAIL_USER`: Email address for sending order notifications.
-- `EMAIL_PASS`: App password or password for the email account.
+- `ADMIN_EMAIL`: Email address that will receive order notifications.
+- `SMTP_HOST`: The SMTP server host (e.g., smtp.gmail.com).
+- `SMTP_PORT`: The SMTP server port (e.g., 587 or 465).
+- `SMTP_USER`: The username for your SMTP server.
+- `SMTP_PASS`: The password or app password for your SMTP server.
 
 ## Local Build & Execution
 
